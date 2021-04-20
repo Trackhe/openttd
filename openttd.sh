@@ -38,7 +38,7 @@ if [ ${LOADGAME_CHECK} != "x" ]; then
                         if [ -f  ${savegame} ]; then
                                 echo "We are loading a save game!"
                                 echo "Lets load ${savegame}"
-                                su -l openttd -c "/usr/games/openttd -D -g ${savegame} -x -d ${DEBUG}"
+                                su -l openttd -c "/usr/games/openttd -D -g ${savegame} -c /home/openttd/.local/share/openttd/openttd.cfg -x -d ${DEBUG}"
                                 exit 0
                         else
                                 echo "${savegame} not found..."
@@ -56,7 +56,7 @@ if [ ${LOADGAME_CHECK} != "x" ]; then
 
 			if [ -r ${savegame} ]; then
 	                        echo "Loading ${savegame}"
-        	                su -l openttd -c "/usr/games/openttd -D -g ${savegame} -x -d ${DEBUG}"
+        	                su -l openttd -c "/usr/games/openttd -D -g ${savegame} -c /home/openttd/.local/share/openttd/openttd.cfg -x -d ${DEBUG}"
                 	        exit 0
 			else
 				echo "${savegame} not found..."
@@ -71,7 +71,7 @@ if [ ${LOADGAME_CHECK} != "x" ]; then
 
 			if [ -r ${savegame} ]; then
 	                        echo "Loading ${savegame}"
-        	                su -l openttd -c "/usr/games/openttd -D -g ${savegame} -x -d ${DEBUG}"
+        	                su -l openttd -c "/usr/games/openttd -D -g ${savegame} -c /home/openttd/.local/share/openttd/openttd.cfg -x -d ${DEBUG}"
                 	        exit 0
 			else
 				echo "${savegame} not found..."
